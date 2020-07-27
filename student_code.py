@@ -40,7 +40,6 @@ def shortest_path(M, start, goal):
     
     g_cost = {}
     g_cost[start] = 0
-    
 
     while len(frontier) >= 1:
         next_node = heappop(frontier)[1]
@@ -57,7 +56,3 @@ def shortest_path(M, start, goal):
                 heappush(frontier, (updated_g_cost, neighbor))
 
     return reconstruct_path(came_from, start, goal)
-
-
-
-
